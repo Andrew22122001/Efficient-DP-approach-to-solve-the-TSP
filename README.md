@@ -1,18 +1,27 @@
-# Efficient Dynamic Programming Approach to Solve the TSP
+# Efficient Solvers for the Traveling Salesman Problem (TSP)
 
 ## Overview
 
-This repository contains an implementation of an **Efficient Dynamic Programming (DP) solution for the Traveling Salesman Problem (TSP)**. The TSP is a classic combinatorial optimization problem that seeks the shortest route to visit a set of cities exactly once and return to the starting city. This project uses a state-compression DP technique to optimize the computational efficiency while maintaining accuracy.
+This repository contains implementations of algorithms for solving the **Traveling Salesman Problem (TSP)**. The TSP is a combinatorial optimization problem where the goal is to find the shortest route to visit a set of cities exactly once and return to the starting city. The project provides two approaches: a basic brute-force implementation and an optimized solution using a Nearest Neighbor heuristic and Dynamic Programming.
 
 ---
 
 ## Features
 
-- **Dynamic Programming with State Compression**: Efficiently manages the exponential growth of possible routes by using a bitmask representation for visited cities.
-- **Customizable Input**: Supports user-defined distance matrices for flexibility.
-- **Optimal Route Finder**: Computes the shortest path visiting all cities exactly once and returning to the starting point.
-- **Cost Calculation**: Displays the total cost of the computed optimal route.
-- **Visualization (Optional)**: Plots the optimal route using Matplotlib for graphical representation of city connections.
+- **Basic Solver**:
+  - Implements a straightforward brute-force approach for TSP.
+  - Reads `.tsp` files and calculates distances between nodes.
+  - Suitable for small datasets but computationally expensive for larger inputs.
+
+- **Optimized Solver**:
+  - Uses the Nearest Neighbor heuristic and Dynamic Programming for improved efficiency.
+  - Reduces runtime significantly compared to the basic brute-force approach.
+
+- **Support for Standard TSP Input Format**:
+  - Parses `.tsp` files containing city coordinates (e.g., `att48.tsp` and `att532.tsp`).
+
+- **Visualization (Optional)**:
+  - Plots the computed TSP route for better analysis.
 
 ---
 
@@ -20,10 +29,10 @@ This repository contains an implementation of an **Efficient Dynamic Programming
 
 To run this project, you need:
 
-- **Python**: Version 3.6 or above.
-- **Required Libraries**:
-  - NumPy: For efficient numerical operations.
-  - Matplotlib (optional): For visualization of the computed route.
+- **Python 3.6+**
+- Required libraries:
+  - NumPy
+  - Matplotlib (optional, for visualization)
 
 Install the dependencies using:
 ```bash
